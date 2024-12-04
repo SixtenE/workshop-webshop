@@ -4,7 +4,9 @@
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Webshop</title>
-        <script src="https://cdn.tailwindcss.com"></script>
+        <link rel="preconnect" href="https://www.ikea.com/se/sv/images/products" />
+        <meta name="description" content="Chas furniture webshop" />
+        <link href="./output.css" rel="stylesheet" />
     </head>
     <body>
         <main class="container pb-32 mx-auto flex flex-col gap-16 pt-8">
@@ -26,7 +28,7 @@
                     </form>
                     <section class="w-full flex h-fit flex-col border border-gray-300 rounded-xl shadow-sm">
                         <h1 class="text-md w-full p-2">Kundvagn</h1>
-                        <ul class="flex w-full flex-col transition-all" id="cart-list"></ul>
+                        <ul class="flex w-full flex-col" id="cart-list"></ul>
                     </section>
                 </div>
                 <section
