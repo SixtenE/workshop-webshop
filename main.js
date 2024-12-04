@@ -4,12 +4,12 @@ const shoppingCart = []
 let buttons
 let products
 
-const productComponent = (product) => `
+const productComponent = ({ imageURL, name, description, price }) => `
     <article class="w-full h-fit flex flex-col gap-2">
-        <img src="${product.imageURL}" alt="product image" />
-        <h2 class="text-2xl font-medium">${product.name}</h2>
-        <p class="h-10 text-sm font-medium text-gray-700">${product.description}</p>
-        <p class="text-3xl font-bold text-red-600">${product.price} kr</p>
+        <img src="${imageURL}" alt="${name} image" />
+        <h2 class="text-2xl font-medium">${name}</h2>
+        <p class="h-10 text-sm font-medium text-gray-700">${description}</p>
+        <p class="text-3xl font-bold text-red-600">${price} kr</p>
         <button id="product-button" class="bg-gray-900 hover:bg-gray-800 text-white text-sm w-fit py-2 px-5 rounded-full">
             Lägg till
         </button>
@@ -104,3 +104,37 @@ document.querySelector('#search').addEventListener('input', (event) => {
 
     displayProducts(filteredProducts)
 })
+
+/*
+[
+    {
+        "id": 1,
+        "name": "Soffa",
+        "price": 6995,
+        "description": "En soffa som är skön att sitta i.",
+        "imageURL": "https://www.ikea.com/se/sv/images/products/vimle-3-sitssoffa-gunnared-beige__0514366_pe639439_s5.jpg?f=xl"
+    },
+    {
+        "id": 2,
+        "name": "Bord",
+        "price": 4950,
+        "description": "Ett bord som är bra att ha.",
+        "imageURL": "https://www.ikea.com/se/sv/images/products/moerbylanga-bord-ekfaner-brunlaserad__0737110_pe740888_s5.jpg?f=xl"
+    },
+    {
+        "id": 3,
+        "name": "Stol",
+        "price": 999,
+        "description": "En stol som är skön att sitta på.",
+        "imageURL": "https://www.ikea.com/se/sv/images/products/skruvsta-skrivbordsstol-ysane-vit__0724712_pe734595_s5.jpg?f=xl"
+    },
+    {
+        "id": 4,
+        "name": "Lampa",
+        "price": 499,
+        "description": "En lampa som lyser upp rummet.",
+        "imageURL": "https://www.ikea.com/se/sv/images/products/tvaerhand-bordslampa-svart-bambu__1027181_pe834780_s5.jpg?f=xl"
+    }
+]
+
+*/
