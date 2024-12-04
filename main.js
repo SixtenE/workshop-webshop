@@ -42,8 +42,8 @@ const displayCart = () => {
     const cartTotal = shoppingCart.reduce((acc, item) => acc + item.price * item.quantity, 0)
 
     shoppingCartList.innerHTML += `
-        <li class="flex w-full p-4 items-center border-t border-gray-300">
-            <p class="font-medium ml-auto">Total: ${cartTotal}kr</p>
+        <li class="flex w-full p-2 items-center border-t border-gray-300">
+            <p class="ml-auto">Total: ${cartTotal}kr</p>
         </li>
     `
 }
